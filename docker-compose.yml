@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: lingit-website
+    ports:
+      - "80:80"
+    restart: always
+    # Uncomment the volumes section below for local development without rebuilding the image
+    # volumes:
+    #   - ./index.html:/usr/share/nginx/html/index.html:ro
+    #   - ./css:/usr/share/nginx/html/css:ro
+    #   - ./js:/usr/share/nginx/html/js:ro
+    #   - ./assets:/usr/share/nginx/html/assets:ro
